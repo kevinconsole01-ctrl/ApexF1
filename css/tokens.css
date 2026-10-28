@@ -1,0 +1,60 @@
+:root {
+  color-scheme: dark;
+
+  /* Superfici */
+  --bg: #08090c;
+  --bg-soft: #0b0d12;
+  --surface: #101218;
+  --surface-2: #141821;
+  --surface-3: #1a1f2a;
+  --border: rgba(255, 255, 255, 0.075);
+  --border-strong: rgba(255, 255, 255, 0.14);
+
+  /* Testo */
+  --text: #f3f5f9;
+  --text-2: #c3c9d4;
+  --muted: #8d95a5;
+  --faint: #606978;
+
+  /* Accenti */
+  --accent: #ff2d16;
+  --accent-2: #ff7a18;
+  --accent-soft: rgba(255, 45, 22, 0.13);
+  --accent-line: rgba(255, 45, 22, 0.38);
+  --live: #2ee6a8;
+  --live-soft: rgba(46, 230, 168, 0.12);
+  --warning: #ffc857;
+  --warning-soft: rgba(255, 200, 87, 0.12);
+  --danger: #ff5a5f;
+  --info: #58a6ff;
+
+  /* Tipografia */
+  --font: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Geometria */
+  --r-xs: 8px;
+  --r-sm: 12px;
+  --r-md: 16px;
+  --r-lg: 22px;
+  --r-xl: 28px;
+  --r-pill: 999px;
+  --sidebar-w: 252px;
+  --topbar-h: 68px;
+  --bottom-nav-h: 64px;
+  --page-max: 1480px;
+  --gutter: 28px;
+
+  /* Ombre */
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 18px 50px -20px rgba(0, 0, 0, 0.65);
+  --shadow-glow: 0 24px 80px -30px rgba(255, 45, 22, 0.45);
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --fast: 160ms var(--ease);
+  --slow: 420ms var(--ease);
+
+  --team: #9aa3b2;
+  --team-soft: rgba(154, 163, 178, 0.16);
+}
