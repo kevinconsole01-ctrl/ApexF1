@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>APEX · Formula 1 Stats</title>
+  <meta name="description" content="Dashboard non ufficiale di Formula 1 con classifiche piloti e costruttori, risultati dei Gran Premi, tempi sul giro e dati live. Costruita sui dati aperti di OpenF1.">
+  <meta name="theme-color" content="#08090c">
+  <meta name="color-scheme" content="dark">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="APEX F1">
+  <meta property="og:title" content="APEX · Formula 1 Stats">
+  <meta property="og:description" content="Classifiche, risultati, tempi sul giro e live timing di Formula 1.">
+  <meta property="og:type" content="website">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <link rel="preload" href="./css/tokens.css" as="style">
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/pages.css">
+  <script>
+    // Diagnostica leggera: gli errori restano visibili nel DOM come attributo,
+    // utili per i test automatici senza mostrare nulla all'utente.
+    (function () {
+      var errors = [];
+      function record(message) {
+        errors.push(String(message).slice(0, 500));
+        document.documentElement.setAttribute('data-js-errors', errors.join(' | '));
+      }
+      window.addEventListener('error', function (e) {
+        record((e.message || 'Error') + (e.filename ? ' @ ' + e.filename.split('/').pop() + ':' + e.lineno : ''));
+      });
+      window.addEventListener('unhandledrejection', function (e) {
+        record('Promise: ' + ((e.reason && (e.reason.message || e.reason)) || 'unknown'));
+      });
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+  <div id="boot" class="boot" aria-live="polite">
+    <div class="boot__logo" aria-hidden="true">
+      <svg viewBox="0 0 64 64" width="64" height="64">
+        <defs>
+          <linearGradient id="bootGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ff3b1f"/>
+            <stop offset="1" stop-color="#ff7a18"/>
+          </linearGradient>
+        </defs>
+        <rect x="2" y="2" width="60" height="60" rx="16" fill="#111319"/>
+        <path d="M18 46 30.5 16h7L50 46h-8.2l-2.1-6H29l-2.6 6Zm13-12h6l-3-9Z" fill="url(#bootGrad)"/>
+      </svg>
+    </div>
+    <p class="boot__title">APEX <span>F1 STATS</span></p>
+    <p class="boot__text">Recupero dati della stagione…</p>
+    <div class="boot__bar"><span></span></div>
+    <p class="boot__hint">Dati aperti OpenF1</p>
+  </div>
+
+  <div id="app" class="app" aria-busy="true"></div>
+  <div id="overlay-root"></div>
+
+  <noscript>
+    <div class="noscript">
+      <h1>JavaScript necessario</h1>
+      <p>APEX usa JavaScript per recuperare e mostrare i dati di Formula 1 da OpenF1. Abilitalo per continuare.</p>
+    </div>
+  </noscript>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

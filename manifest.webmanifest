@@ -1,0 +1,64 @@
+{
+  "id": "./",
+  "name": "APEX · F1 Stats",
+  "short_name": "APEX F1",
+  "description": "Dashboard non ufficiale di Formula 1 con classifiche piloti e costruttori, risultati dei Gran Premi, tempi sul giro e live timing. Dati aperti OpenF1.",
+  "lang": "it",
+  "dir": "ltr",
+  "start_url": "./#/dashboard",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#08090c",
+  "theme_color": "#08090c",
+  "categories": ["sports", "news"],
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Classifiche",
+      "short_name": "Classifiche",
+      "description": "Classifica piloti e costruttori",
+      "url": "./#/standings",
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Risultati",
+      "short_name": "Risultati",
+      "description": "Ultimi Gran Premi",
+      "url": "./#/results",
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Live",
+      "short_name": "Live",
+      "description": "Live timing della sessione in corso",
+      "url": "./#/live",
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
+}
